@@ -22,9 +22,9 @@ window.addEventListener('message', function(event) {
   log('<em>' + event.data + '</em>');
 });
 var other = window.open('https://simpl.info/postmessage/popup/other.html', '_blank', 'height=200,width=150,toolbar=0,menubar=0,location=0');
-other.onload = function() {
-  other.postMessage('Hi! this is a message from index.html.', '*');
-};
+
+
+window.setTimeout(() => other.postMessage('Hi! this is a message from index.html.', '*'), 1000);
 
 function log(message) {
   document.getElementById('data').innerHTML += message + '<br /><br />';
