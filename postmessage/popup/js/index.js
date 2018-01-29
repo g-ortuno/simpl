@@ -26,6 +26,8 @@ var other = window.open('https://simpl.info/postmessage/popup/other.html', '_bla
 
 window.setTimeout(() => other.postMessage('Hi! this is a message from index.html.', '*'), 1000);
 
+window.setTimeout(() => other.close(), 5000);
+
 function log(message) {
   document.getElementById('data').innerHTML += message + '<br /><br />';
 }
