@@ -21,7 +21,7 @@ window.addEventListener('message', function(event) {
     ' and got the following in response:');
   log('<em>' + event.data + '</em>');
 });
-var other = window.open('other.html', '_blank', 'height=200,width=150,toolbar=0,menubar=0,location=0');
+var other = window.open('https://simpl.info/postmessage/popup/other.html', '_blank', 'height=200,width=150,toolbar=0,menubar=0,location=0');
 other.onload = function() {
   other.postMessage('Hi! this is a message from index.html.', '*');
 };
